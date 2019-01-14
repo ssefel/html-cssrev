@@ -1,0 +1,38 @@
+* {
+	box-sizing: border-box;
+}
+
+body, html {
+	min-height: 100%;
+	margin: 0;
+}
+
+.grid-parent {
+	display: grid;
+	grid-template-columns: 3fr 2fr; 
+	grid-gap: 30px;
+}
+
+.item2 {
+	grid-row: span 2;
+	background: pink;
+}
+
+.item4 {
+	grid-column: 2;
+}
+
+@media screen and (max-width: 320px) {
+	.grid-parent {
+		grid-template-columns: 1fr;
+	}
+	.item2 {
+		grid-row: span 1;
+		background: pink;
+	}
+	.item4 {
+		grid-column: 1;
+	}
+
+
+}
